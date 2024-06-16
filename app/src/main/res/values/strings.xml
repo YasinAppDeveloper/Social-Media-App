@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="sign_in_with_facebook">Sign In with facebook</string>
+    <string name="sign_in_with_google">Sign In with google</string>
+    <string name="sign_in_with_twitter">Sign In with twitter</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="default_web_client_id">680784693277-gdnrp2583vbpu7d0opmev6paptv8rs9u.apps.googleusercontent.com</string>
+    <string name="home">Home\n</string>
+    <string name="videos">Search\n</string>
+    <string name="add">Add\n</string>
+    <string name="reel">Reel</string>
+    <string name="profile">Profile</string>
+    <string name="add_new_post">Add New Post</string>
+    <string name="write_a_caption">Write a Caption</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

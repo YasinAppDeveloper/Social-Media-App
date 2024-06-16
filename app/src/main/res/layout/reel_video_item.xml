@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/play_pause_Layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/exoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:resize_mode="fill"
+        app:animation_enabled="false"
+        app:show_buffering="always"
+        app:controller_layout_id="@layout/exo_controller"
+        tools:ignore="PrivateResource" />
+
+    <ImageView
+        android:id="@+id/play_pause_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:layout_centerInParent="true"
+       />
+
+    <ProgressBar
+        android:id="@+id/progressReel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/progressBarBlue"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables,
+            UselessParent">
+
+            <ImageView
+                android:id="@+id/reel_like_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart_repo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+
+                android:textColor="@color/white"
+                android:id="@+id/like_count_reel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables,
+            UselessParent">
+
+            <ImageView
+                android:id="@+id/reel_message_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="#F2FFFFFF"
+                android:src="@drawable/comment_new_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/message_count_reel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables,
+            UselessParent"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:id="@+id/share_like_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="@color/white"
+                android:src="@drawable/share_new"
+                tools:ignore="ContentDescription" />
+
+
+
+            <ImageView
+                android:id="@+id/more_like_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="@color/white"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/more"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/publisher_profile_image_reel"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="5dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/blue"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:id="@+id/userName_reel"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/followButton"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:text="Following"
+                android:layout_marginStart="7dp"
+                app:strokeColor="@color/white"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reelCaption"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="I have new post You are amazing content and "
+            android:layout_marginTop="2dp"
+            android:maxLines="2"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/roboto_light"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>

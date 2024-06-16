@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/home_main"
+        android:title="@string/home"
+        android:id="@+id/homeFragment"/>
+    <item android:icon="@drawable/search_main"
+        android:title="@string/videos"
+        android:id="@+id/searchFragment"/>
+    <item android:icon="@drawable/add_main"
+        android:title="@string/add"
+        android:id="@+id/addFragment"/>
+    <item android:icon="@drawable/reel_main"
+        android:title="@string/reel"
+        android:id="@+id/reelFragment"/>
+    <item android:icon="@drawable/account_main"
+        android:title="@string/profile"
+        android:id="@+id/profileFragment"/>
+</menu>
